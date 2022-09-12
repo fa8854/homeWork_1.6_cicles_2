@@ -12,12 +12,13 @@ public class Main {
     }
     public static void homeWork1(){
         System.out.println("Задача №1");
-    int money = 500_000;
+    int month = 500_000;
     int i = 0;
     double bank = 0;
     double percent = 0.01;
-        while ( bank < 2_459_000 ){
-            bank = (bank + money) * (1 + percent);
+    int sum = 2_459_000;
+        while ( bank < sum ){
+            bank = (bank + month) * (1 + percent);
             i = i + 1;
             System.out.println("Месяц " + i + ", сумма накоплений равна " + bank + " рублей");
         }
@@ -62,8 +63,9 @@ public class Main {
         double percent = 0.07;
         int month = 0;
         double bank = 0;
+        int sum = 12_000_000;
 
-        while (money <= 12_000_000){
+        while (money <= sum){
 
             bank = (bank + money) * percent;
             money = money + (int) bank;
@@ -78,8 +80,8 @@ public class Main {
         double percent = 0.07;
         int month = 0;
         double bank = 0;
-
-        while (money < 12_000_000){
+        int sum = 12_000_000;
+        while (money < sum){
             bank = (bank + money) * percent;
             money = money + (int) bank;
             month++;
@@ -96,7 +98,8 @@ public class Main {
         double percent = 0.07;
         int month = 0;
         double bank = 0;
-        while (month < 108) {
+        int month1 = 9*12;
+        while (month < month1) {
             bank = (bank + money) * percent;
             money = money + (int) bank;
             month++;
@@ -110,7 +113,7 @@ public class Main {
         System.out.println("Задача №7");
         int oneFriday = 2;
         int friday = oneFriday;
-        while (oneFriday < 31){
+        while (oneFriday <= 31){
            if (oneFriday % 7 == friday){
                 System.out.println("Сегодня пятница, "+ oneFriday +" -е число. Необходимо подготовить отчет.");
                 oneFriday = oneFriday + 7;
@@ -123,8 +126,10 @@ public class Main {
         System.out.println("Задача №8");
         int year = 0;
         int comet = 79;
-        int yearOne = 1822;
-        int yearTwo = 2122;
+        int nowYear = 2022;
+        int yearOne = nowYear - 200;
+        int yearTwo = nowYear + 100;
+
       /*
         while (year < 3000){
             year = year + comet;
